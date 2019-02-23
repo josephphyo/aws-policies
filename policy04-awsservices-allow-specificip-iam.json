@@ -1,0 +1,16 @@
+{
+	"Version": "2012-10-17",
+	"Statement": {
+		"Effect": "Deny",
+		"Action": "*",
+		"Resource": "*",
+		"Condition": {
+			"NotIpAddress": {
+				"aws:SourceIp": [
+					"192.168.30.10/32",
+					"192.168.20.10/32"
+				]
+			}
+		}
+	}
+}
