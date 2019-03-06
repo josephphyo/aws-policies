@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": [
+        "es:*"
+      ],
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": [
+            "192.168.0.1/32",
+            "192.168.0.2/32"
+          ]
+        }
+      },
+      "Resource": "arn:aws:es:XXXXXXXXXXXX/*"
+    }
+  ]
+}
+
+
