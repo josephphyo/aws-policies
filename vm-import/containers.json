@@ -1,0 +1,9 @@
+[
+  {
+    "Description": "Windows 2008 OVA",
+    "Format": "ova",
+    "UserBucket": {
+        "S3Bucket": "vmimport-bucket",
+        "S3Key": "WindowServer.ova"
+    }
+}]
