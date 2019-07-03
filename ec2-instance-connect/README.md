@@ -25,3 +25,6 @@ ssh -i yourpublickey.pem ec2-user@ec2-XX-XXX-XXX-XX.compute-1.amazonaws.com
 ssh -i yourpublickey.pem ec2-user@ec2-XX-XXX-XXX-XX.compute-1.amazonaws.com
 Permission denied (publickey,gssapi-keyex,gssapi-with-mic)
 ```
+
+[Connecting to an instance using EC2 Instance Connect
+](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html "Connecting to an instance using EC2 Instance Connect").
