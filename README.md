@@ -8,5 +8,6 @@
 
 - IAM Policy [-iam]
 - S3 Bucket Policy [-s3]
+- Other 
   
 **Reference: [https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)**
