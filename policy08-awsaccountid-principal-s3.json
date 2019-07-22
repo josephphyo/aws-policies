@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "*"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::mybucket/*"
+        },
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::***AWSAccountID***:root"
+            },
+            "Action": [
+                "s3:PutObjectAcl",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::mybucket/*"
+        }
+    ]
+}
