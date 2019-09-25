@@ -1,30 +1,18 @@
 {
-  "Version": "2012-10-17",
-  "Id": "S3-Bucket-Enforce-Encryption-Upload-sses3",
-  "Statement": [
-    {
-      "Sid": "DenyIncorrectEncryptionHeader",
-      "Effect": "Deny",
-      "Principal": "*",
-      "Action": "s3:PutObject",
-      "Resource": "arn:aws:s3:::MyBucket/*",
-      "Condition": {
-        "StringNotEquals": {
-          "s3:x-amz-server-side-encryption": "AES256"
+    "Version": "2012-10-17",
+    "Id": "S3-Bucket-Enforce-Encryption-Upload-sses3",
+    "Statement": [
+        {
+            "Sid": "1",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::mybucket/*",
+            "Condition": {
+                "StringNotEquals": {
+                    "s3:x-amz-server-side-encryption": "AES256"
+                }
+            }
         }
-      }
-    },
-    {
-      "Sid": "DenyUnEncryptedObjectUploads",
-      "Effect": "Deny",
-      "Principal": "*",
-      "Action": "s3:PutObject",
-      "Resource": "arn:aws:s3:::MyBucket/*",
-      "Condition": {
-        "Null": {
-          "s3:x-amz-server-side-encryption": "true"
-        }
-      }
-    }
-  ]
+    ]
 }
