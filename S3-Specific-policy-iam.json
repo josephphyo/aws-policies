@@ -8,14 +8,14 @@
                 "s3:ListAllMyBuckets",
                 "s3:*Object"
             ],
-            "Resource": "arn:aws:s3:::sandbox-owaytrip-images"
+            "Resource": "arn:aws:s3:::mybucket"
         },
         {
             "Effect": "Allow",
             "Action": "s3:*",
             "Resource": [
-                "arn:aws:s3:::sandbox-owaytrip-images",
-                "arn:aws:s3:::sandbox-owaytrip-images/*"
+                "arn:aws:s3:::mybucket",
+                "arn:aws:s3:::mybucket/*"
             ]
         }
     ]
