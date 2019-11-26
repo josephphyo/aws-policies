@@ -1,0 +1,20 @@
+## S3 Bucket Policy For Classic LoadBalancer Accesslogs to S3 Bucket
+## 114774131450 = ap-southeast-1(Singapore)
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::114774131450:root"
+            },
+            "Action": "s3:PutObject",
+            "Resource": [
+                "arn:aws:s3:::s3bucket-name/folder-prefix/*",
+                "arn:aws:s3:::s3bucket-name/folder-prefix/*",
+                "arn:aws:s3:::s3bucket-name/folder-prefix/*"
+            ]
+        }
+    ]
+}
