@@ -4,10 +4,10 @@
 
 ##### AWS IAM Policies Elements for References.
 ##### Version - 2012-10-17
-###### JSON 
+###### :mega: JSON 
 
-- IAM Policy [-iam]
-- S3 Bucket Policy [-s3]
-- Other 
+:mag_right: IAM Policy [-iam]
+:mag_right: S3 Bucket Policy [-s3]
+:mag_right: Other 
   
 **Reference: [https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)**
