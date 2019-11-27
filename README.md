@@ -7,7 +7,9 @@
 ###### :mega: JSON 
 
 :mag_right: IAM Policy [-iam]
+
 :mag_right: S3 Bucket Policy [-s3]
+
 :mag_right: Other 
   
 **Reference: [https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)**
