@@ -1,0 +1,31 @@
+{
+ "Version":"2012-10-17",
+ "Statement": [
+   {
+     "Sid": " allows the user to list the buckets that belong to their AWS account",
+     "Action": ["s3:ListAllMyBuckets", "s3:GetBucketLocation"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::*"]
+   },
+  {
+     "Sid": "allows the user to list bucket actions - specific folder",
+     "Action": ["s3:ListBucket"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::demo-bucket-1990"],
+     "Condition":{"StringEquals":{"s3:prefix":["","work"],"s3:delimiter":["/"]}}
+    },
+  {
+     "Sid": "allows the user to list bucket actions - specific folder",
+     "Action": ["s3:ListBucket"],
+     "Effect": "Allow",
+     "Resource": ["arn:aws:s3:::demo-bucket-1990"],
+     "Condition":{"StringLike":{"s3:prefix":["work/*"]}}
+    },
+   {
+     "Sid": "allows the user to perform all object-level actions",
+     "Effect": "Allow",
+     "Action": ["s3:*"],
+     "Resource": ["arn:aws:s3:::demo-bucket-1990/work/*"]
+   }
+ ]
+}
