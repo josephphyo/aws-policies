@@ -57,13 +57,24 @@
             }
         },
         {
+            "Sid": "Stmt1578906237564",
+            "Action": "cloudwatch:*",
+            "Effect": "Allow",
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:RequestedRegion": "ap-southeast-1"
+                }
+            }
+        },
+        {
             "Sid": "Stmt1578906256368",
             "Action": "sns:*",
             "Effect": "Allow",
             "Resource": "*",
             "Condition": {
                 "StringEquals": {
-                    "aws:RequestedRegion": "us-east-1"
+                    "aws:RequestedRegion": "ap-southeast-1"
                 }
             }
         }
