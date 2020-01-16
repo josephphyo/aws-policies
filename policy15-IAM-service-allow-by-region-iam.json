@@ -79,6 +79,39 @@
          }
       },
       {
+         "Sid":"Stmt1579171510242",
+         "Action":"elasticloadbalancing:*",
+         "Effect":"Allow",
+         "Resource":"*",
+         "Condition":{
+            "StringEquals":{
+               "aws:RequestedRegion":"ap-southeast-1"
+            }
+         }
+      },
+      {
+         "Sid":"Stmt1579171528804",
+         "Action":"elasticloadbalancing:*",
+         "Effect":"Allow",
+         "Resource":"*",
+         "Condition":{
+            "StringEquals":{
+               "aws:RequestedRegion":"ap-southeast-1"
+            }
+         }
+      },
+      {
+         "Sid":"Stmt1579172183090",
+         "Action":"servicediscovery:*",
+         "Effect":"Allow",
+         "Resource":"*",
+         "Condition":{
+            "StringEquals":{
+               "aws:RequestedRegion":"ap-southeast-1"
+            }
+         }
+      },
+      {
          "Sid":"Stmt1579160579569",
          "Action":"logs:*",
          "Effect":"Allow",
