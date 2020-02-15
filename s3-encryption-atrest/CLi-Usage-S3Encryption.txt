@@ -1,0 +1,31 @@
+CLi-Usage - S3 Encryption 
+++++++++++++++++++++++++++
+
+SSE-S3 (AES256) 
+$ aws s3 cp path/to/local.file s3://pmh-sses3-bucket --sse AES256
+$ aws s3 cp s3://pmh-sses3-bucket path/to/local.file
+
+SSE-KMS (AWS managed CMK)
+$ aws s3 cp path/to/local.file s3://bucket-name/sse-kms --sse aws:kms
+$ aws s3 cp s3://pmh-ssekms-bucket path/to/local.file
+
+SSE-KMS (customer managed CMK)
+$ aws kms create-key (Create Key) 
+$ aws s3 cp path/to/local.file s3://s3://pmh-ssekms-bucket --sse aws:kms --sse-kms-key-id KMS_KEY_ID
+$ aws s3 cp s3://pmh-ssekms-bucket path/to/local.file
+$ aws kms disable-key --key-id KMS_KEY_ID
+$ aws kms schedule-key-deletion --key-id KMS_KEY_ID
+
+
+SSE-C (Create your own encryption) 
+$ openssl rand -out SSE-C.key 32 
+$ aws s3 cp path/to/local.file s3://pmh-ssec --sse-c AES256 --sse-c-key fileb://SSE-C.key
+$ aws s3 cp s3://pmh-ssec path/to/local.file --sse-c AES256 --sse-c-key fileb://SSE-C.key
+
+
+
+
+
+
+
+
