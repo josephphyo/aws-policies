@@ -1,0 +1,30 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::Your Bucket Name/*"
+        },
+        {
+            "Sid": "UserSpecificConditions",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "IAM User ARN ::: - From IAM User Setting"         
+            },
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject",
+                "s3:PutBucketWebsite"
+            ],
+            "Resource": [
+                "arn:aws:s3:::Your Bucket Name",
+                "arn:aws:s3:::Your Bucket Name/*"
+            ]
+        }
+    ]
+}
